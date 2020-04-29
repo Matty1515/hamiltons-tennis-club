@@ -1,0 +1,25 @@
+{
+  "name": "hamiltons-tennis-club",
+  "version": "1.0.0",
+  "description": "Landing page for Hamilton's Tennis Club",
+  "main": "src/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Matty1515/hamiltons-tennis-club.git"
+  },
+  "author": "Matty1515",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Matty1515/hamiltons-tennis-club/issues"
+  },
+  "homepage": "https://github.com/Matty1515/hamiltons-tennis-club#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.5"
+  }
+}
