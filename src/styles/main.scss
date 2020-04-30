@@ -164,7 +164,7 @@ h1 {
   justify-content: flex-end;
   align-items: center;
   position: relative;
-  z-index: 2;
+  z-index: 3;
   button {
     min-height: 40px;
     min-width: 160px;
@@ -173,7 +173,7 @@ h1 {
 .splash__left {
   grid-area: left;
   position: relative;
-  z-index: 2;
+  z-index: 3;
   h1 {
     max-width: 800px;
     margin-top: 4vw;
@@ -201,6 +201,14 @@ h1 {
   padding: 25px;
   right: 35px;
   bottom: 10px;
+}
+.splash__right img {
+  position: absolute;
+  height: 100vh;
+  width: auto;
+  z-index: 2;
+  bottom: 0;
+  margin-left: -100px;
 }
 
 /* === 3) Intro === */
@@ -290,13 +298,14 @@ h1 {
   z-index: 1;
 }
 .intro-one .intro__image {
-  background-image: url("https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  background-image: url("https://images.unsplash.com/photo-1555160679-b1b58488f476?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1789&q=80");
+  /* https://unsplash.com/photos/12Ozc-VG9pQ */
   background-size: auto 100%;
   transform: rotate(-2deg);
 }
 .intro-three .intro__image {
-  background-image: url("https://images.unsplash.com/photo-1555160679-b1b58488f476?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1789&q=80");
-  /* https://unsplash.com/photos/12Ozc-VG9pQ */
+  background-image: url("https://images.unsplash.com/photo-1530915534664-4ac6423816b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  
   background-size: auto 100%;
   transform: rotate(2deg);
 }
