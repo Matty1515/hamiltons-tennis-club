@@ -105,7 +105,7 @@ h1 {
   }
   min-height: 100vh;
   background-color: $colour-dark;
-  background-image: url("https://www.transparenttextures.com/patterns/football-no-lines.png");
+  background-image: url("../img/football-no-lines.png");
   box-sizing: border-box;
   padding: 0 4vw;
   display: grid;
@@ -157,6 +157,9 @@ h1 {
     cursor: pointer;
     opacity: 1;
   }
+  a {
+    text-decoration: none;
+  }
 }
 .splash__email {
   grid-area: email;
@@ -194,7 +197,8 @@ h1 {
 .splash__bg {
   height: 100%;
   width: 100%;
-  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2301595a' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+  // lighter version - background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2301595a' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23004445' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
   position: relative;
   transform: rotate(15deg);
   z-index: 1;
@@ -298,13 +302,13 @@ h1 {
   z-index: 1;
 }
 .intro-one .intro__image {
-  background-image: url("https://images.unsplash.com/photo-1555160679-b1b58488f476?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1789&q=80");
+  background-image: url("../img/intro-img1.jpg");
   /* https://unsplash.com/photos/12Ozc-VG9pQ */
   background-size: auto 100%;
   transform: rotate(-2deg);
 }
 .intro-three .intro__image {
-  background-image: url("https://images.unsplash.com/photo-1530915534664-4ac6423816b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  background-image: url("../img/intro-img3.jpg");
   
   background-size: auto 100%;
   transform: rotate(2deg);
@@ -350,7 +354,7 @@ h1 {
   max-height: 600px;
   position: relative;
   z-index: 1;
-  background-image: url("https://images.unsplash.com/photo-1574379989050-bfd9e1a8a543?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80");
+  background-image: url("../img/intro-img2.jpg");
   /* https://unsplash.com/photos/12Ozc-VG9pQ */
   background-size: 100% auto;
   transform: rotate(2deg);
@@ -358,6 +362,9 @@ h1 {
 .intro-two .intro__imagebg {
   grid-area: 1 / 2 / 4 / 4;
   transform: rotate(-2deg);
+}
+.image--smallscreen {
+  display: none;
 }
 @media screen and (max-width: 1150px) {
   .intro-one, .intro-three {
@@ -372,11 +379,19 @@ h1 {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    .intro__image {
-      display: none;
-    }
     .intro__imagebg {
       display: none;
+    }
+    .image--largescreen {
+      display: none;
+    }
+    .image--smallscreen {
+      display: block;
+    }
+    .intro__image {
+      width: 80%;
+      height: 400px;
+      margin: 0px auto;
     }
     .head-main {
       font-size: calc(12vw + 20px);
@@ -386,8 +401,21 @@ h1 {
       font-size: 100px;
     }
   }
+  .intro-one .image--smallscreen {
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+  .intro-three .image--smallscreen {
+    margin-top: 0px;
+    margin-bottom: 50px;
+  }
   .intro-three .intro__text {
     margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .intro-three .image--smallscreen {
+    margin-top: -30px;
   }
 }
 
@@ -512,7 +540,7 @@ h1 {
   opacity: 0.6;
 }
 .signup__img1 {
-  background-image: url("https://images.unsplash.com/photo-1558731991-cb3430a08bb7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1094&q=80");
+  background-image: url("../img/singup-img1.jpg");
   /* https://unsplash.com/photos/tdEjTjdLyuE */
   background-position: center;
   background-size: auto 100%;
@@ -523,7 +551,7 @@ h1 {
   border: 1px solid $colour-light;
 }
 .signup__img2 {
-  background-image: url("https://images.unsplash.com/photo-1510535043828-3d1edc68071e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  background-image: url("../img/singup-img2.jpg");
   /* https://unsplash.com/photos/bTfza0M0hCE */
   background-position: right;
   background-size: auto 100%;
