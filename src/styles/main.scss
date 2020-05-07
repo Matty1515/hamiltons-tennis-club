@@ -179,7 +179,7 @@ h1 {
   z-index: 3;
   h1 {
     max-width: 800px;
-    margin-top: 4vw;
+    margin-top: 50px;
     margin-bottom: 20px;
   }
   p {
@@ -193,6 +193,7 @@ h1 {
 }
 .splash__right {
   grid-area: right;
+  position: relative;
 }
 .splash__bg {
   height: 100%;
@@ -213,6 +214,48 @@ h1 {
   z-index: 2;
   bottom: 0;
   margin-left: -100px;
+}
+// fix that stupid h1 margin top thingy
+// and reduce the button margin bottom
+@media screen and (max-width: 1250px) {
+  .splash {
+    grid-template-columns: 150px 480px 1fr;
+  }
+}
+@media screen and (max-width: 900px) {
+  .splash {
+    grid-template-columns: 100px 1fr 160px;
+    grid-template-areas: 
+      "brand nav email"
+      "left left left"
+    ;
+  }
+  .splash__left p {
+    max-width: 500px;
+  }
+  .splash__right {
+    display: none;
+  }
+  .head-main {
+    font-size: calc(12vw + 20px);
+  }
+}
+@media screen and (max-width: 580px) {
+  .splash {
+    grid-template-columns: 100px 1fr;
+    grid-template-areas: 
+      "brand nav"
+      "left left"
+    ;
+  }
+  .splash__email {
+    display: none;
+  }
+  .splash__left {
+    button {
+      margin: 10px 10px 0px 0px;
+    }
+  }
 }
 
 /* === 3) Intro === */
