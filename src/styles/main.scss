@@ -215,8 +215,6 @@ h1 {
   bottom: 0;
   margin-left: -100px;
 }
-// fix that stupid h1 margin top thingy
-// and reduce the button margin bottom
 @media screen and (max-width: 1250px) {
   .splash {
     grid-template-columns: 150px 480px 1fr;
@@ -452,13 +450,16 @@ h1 {
     margin-top: 0px;
     margin-bottom: 50px;
   }
+  .intro-two {
+    padding: 20px 0px 20px 20px;
+  }
   .intro-three .intro__text {
     margin-bottom: 60px;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 620px) {
   .intro-three .image--smallscreen {
-    margin-top: -30px;
+    margin-top: -20px;
   }
 }
 
@@ -476,6 +477,8 @@ h1 {
   min-height: 100vh;
   background-color: $colour-dark;
   padding: 40px 0;
+  position: relative;
+  overflow-x: hidden;
 }
 .about .head-main {
   color: $colour-lightest;
@@ -572,6 +575,7 @@ h1 {
   display: flex;
   padding: 20px;
   box-sizing: border-box;
+  position: relative;
 }
 .signup .signup__email:hover {
   color: $colour-dark;
