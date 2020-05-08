@@ -442,24 +442,12 @@ h1 {
       font-size: 100px;
     }
   }
-  .intro-one .image--smallscreen {
+  .intro-one .image--smallscreen, .intro-two .image--smallscreen {
     margin-top: 40px;
     margin-bottom: 10px;
   }
-  .intro-three .image--smallscreen {
-    margin-top: 0px;
-    margin-bottom: 50px;
-  }
-  .intro-two {
-    padding: 20px 0px 20px 20px;
-  }
   .intro-three .intro__text {
     margin-bottom: 60px;
-  }
-}
-@media screen and (max-width: 620px) {
-  .intro-three .image--smallscreen {
-    margin-top: -20px;
   }
 }
 
@@ -547,6 +535,8 @@ h1 {
   background-color: $colour-lightest;
   display: flex;
   flex-direction: row;
+  position: relative;
+  overflow-x: hidden;
 }
 .signup__left {
   > * {
@@ -576,6 +566,7 @@ h1 {
   padding: 20px;
   box-sizing: border-box;
   position: relative;
+  overflow-x: hidden;
 }
 .signup .signup__email:hover {
   color: $colour-dark;
